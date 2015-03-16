@@ -73,7 +73,7 @@ def find_url(text):
 ######################################################
 def GenTweetFeatures(T):
     num_tweets = len(T)
-    featureVector_tw = numpy.zeros((num_tweets,3), numpy.float64)
+    featureVector_tw = numpy.zeros((num_tweets,3), int)
     for enum, tweet_text in enumerate(T):
 	#first rule: number of hashtags per tweet
 	featureVector_tw[enum,0] = tweet_text.count('#')
